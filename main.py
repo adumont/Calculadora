@@ -49,6 +49,11 @@ while True:
     elif a.lower() == "drop":
       pila.pop()
 
+    elif a.lower() == "dropn":
+      n = int(pila.pop())
+      for i in range(n):
+        pila.pop()
+
     elif a.lower() == "swap":
       n2 = pila.pop()
       n1 = pila.pop()
