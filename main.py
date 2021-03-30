@@ -14,7 +14,7 @@ def screen_clear():
 
 pila = []
 
-tamanio = 9
+tamanio = 4
 
 def showPila():
   l=len(pila)
