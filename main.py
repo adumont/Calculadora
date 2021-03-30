@@ -14,13 +14,15 @@ def screen_clear():
 
 pila = []
 
+tamanio = 9
+
 def showPila():
   l=len(pila)
-  n=min(l,4)
+  n=min(l,tamanio)
 
   print("____________________")
-  for i in range(4-n):
-    print("%d:" % (4-i))
+  for i in range(tamanio-n):
+    print("%d:" % (tamanio-i))
   for i in range(n):
     num = "%f" % pila[l-n+i]
     pad = ' ' * (17 - len(num))
@@ -53,6 +55,10 @@ while True:
       n = int(pila.pop())
       for i in range(n):
         pila.pop()
+
+    elif a.lower() == "pick":
+      n = int(pila.pop())
+      pila.append(pila[-n])
 
     elif a.lower() == "swap":
       n2 = pila.pop()
