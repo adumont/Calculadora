@@ -11,7 +11,7 @@ while True:
   s = s.strip()
 
   for a in s.split(" "):
-    if a in ["+", "-", "/", "*", "^"]:
+    if a in ["+", "-", "/", "*", "**"]:
       n2 = pila.pop()
       n1 = pila.pop()
       
@@ -19,7 +19,7 @@ while True:
       elif a == "-": pila.append(n1-n2)
       elif a == "*": pila.append(n1*n2)
       elif a == "/": pila.append(n1/n2)
-      elif a == "^": pila.append(n1**n2)
+      elif a == "**": pila.append(n1**n2)
 
     elif a == "pi":
       pila.append(math.pi)
