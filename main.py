@@ -28,7 +28,6 @@ def showPila():
     print("%d: %s%s" % (n-i, pad, num))
   print("")
     
-
 while True:
   screen_clear()
   showPila()
@@ -45,6 +44,21 @@ while True:
       elif a == "*": pila.append(n1*n2)
       elif a == "/": pila.append(n1/n2)
       elif a == "**": pila.append(n1**n2)
+
+    elif a.lower() == "drop":
+      pila.pop()
+
+    elif a.lower() == "swap":
+      n2 = pila.pop()
+      n1 = pila.pop()
+      pila.append(n2)
+      pila.append(n1)
+
+    elif a.lower() in ["purge", "clear"]:
+      pila=[]
+
+    elif a.lower() == "len":
+      pila.append(len(pila))
 
     elif a == "pi":
       pila.append(math.pi)
