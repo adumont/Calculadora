@@ -39,12 +39,12 @@ while True:
       n2 = pila.pop()
       n1 = pila.pop()
       
-      if a == "+": pila.append(n1+n2)
-      elif a == "-": pila.append(n1-n2)
-      elif a == "*": pila.append(n1*n2)
-      elif a == "/": pila.append(n1/n2)
+      if   a == "+":  pila.append(n1+n2)
+      elif a == "-":  pila.append(n1-n2)
+      elif a == "*":  pila.append(n1*n2)
+      elif a == "/":  pila.append(n1/n2)
       elif a == "**": pila.append(n1**n2)
-      elif a == "%": pila.append(n1%n2)
+      elif a == "%":  pila.append(n1%n2)
 
     elif a.lower() == "drop":
       pila.pop()
